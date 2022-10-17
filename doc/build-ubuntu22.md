@@ -6,4 +6,16 @@ sudo apt-get install libboost-all-dev libevent-dev linux-headers-$(uname -r)
 sudo apt-get install fontconfig libfreetype-dev libqrencode-dev
 sudo apt-get install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
 sudo apt-get install libnatpmp-dev libminiupnpc-dev libzmq3-dev libzmq3-dev
+sudo apt-get install libsqlite3-dev
+sudo apt-get install libdb++-dev
 ```
+
+## Build
+```bash
+./autogen.sh
+./configure --with-incompatible-bdb --enable-hardening
+nice make -j 4
+```
+
+
+
